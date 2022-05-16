@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             </Head>
             <main className="bg-slate-500 h-screen w-screen flex flex-col justify-between">
                 <MenuBar />
-                <div className="grow">
+                <div className="grow overflow-auto">
                     <Component {...pageProps} />
                 </div>
                 <footer>

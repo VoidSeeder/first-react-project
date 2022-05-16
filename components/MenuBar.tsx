@@ -1,3 +1,3 @@
 export default function MenuBar() {
-    return <h1>OLA MUNDO!</h1>;
+    return <div className="h-16 bg-blue-900"></div>;
 }
