@@ -2,8 +2,6 @@ import {
     Area,
     AreaChart,
     CartesianGrid,
-    Line,
-    LineChart,
     ResponsiveContainer,
     Tooltip,
     XAxis,
@@ -78,19 +76,15 @@ export default function Home() {
     ): ChartPointType[] {
         const points: ChartPointType[] = [];
 
-        for (var x: number = x_initial; Math.round(x * 1000) / 1000 <= x_final; x += x_resolution) {
+        for (
+            var x: number = x_initial;
+            Math.round(x * 1000) / 1000 <= x_final;
+            x += x_resolution
+        ) {
             points.push({ x: Math.round(x * 1000) / 1000, T: T_x(x) });
         }
 
         return points;
-    }
-
-    function getCordX(x: number): number {
-        return (530 / 0.3) * x + 65;
-    }
-
-    function getCordY(x: number): number {
-        return (260 / (100 - 20)) * x;
     }
 
     return (
@@ -137,14 +131,7 @@ export default function Home() {
                             }
                         )}
                     >
-                        {/* <Line type="monotone" dataKey="T" stroke="black" /> */}
-                        <CartesianGrid
-                            stroke="#ccc"
-                            // verticalPoints={[
-                            //     0.05, 0.1, 0.15, 0.2, 0.25, 0.3,
-                            // ].map((value) => getCordX(value))}
-                            // horizontalPoints={[40, 60, 100].map((value) => getCordY(value))}
-                        />
+                        <CartesianGrid stroke="#ccc" />
                         <XAxis dataKey="x" />
                         <YAxis type="number" domain={[20, 100]} />
                         <Tooltip />
