@@ -195,10 +195,6 @@ export default function Home() {
 
     const [x, setX] = useState(0.05);
 
-    // function temperatureDistribution(m: number, x: number): number {
-    //     return Math.exp(-m * x);
-    // }
-
     function M(
         h: number,
         P: number,
@@ -209,21 +205,9 @@ export default function Home() {
         return Math.sqrt(h * P * k * A_tr) * theta_b;
     }
 
-    // function P(d: number): number {
-    //     return Math.PI * d;
-    // }
-
-    // function finHeatTransferHate(M: number): number {
-    //     return M;
-    // }
-
     function m(h: number, P: number, k: number, A_tr: number): number {
         return Math.sqrt((h * P) / (k * A_tr));
     }
-
-    // function A_tr(radius: number): number {
-    //     return Math.PI * Math.pow(radius, 2);
-    // }
 
     function theta_b(T_b: number, T_inf: number): number {
         return T_b - T_inf;
